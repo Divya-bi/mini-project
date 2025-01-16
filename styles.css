@@ -1,0 +1,355 @@
+/* General Reset */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Container */
+.header-container {
+    background-color: #ffffff;
+    border-bottom: 2px solid #f2f2f2;
+    padding: 15px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo-title {
+    display: flex;
+    align-items: flex-end;
+    gap: 15px;
+    position: relative;
+    background: #ff3f6c;
+    padding: 10px 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    font-family: cursive;
+}
+
+.logo-title h1 {
+    font-size: 32px;
+    color: #ffffff;
+    margin: 0;
+    font-weight: bold;
+}
+
+.logo-title span {
+    font-size: 12px;
+    position: absolute;
+    bottom: -5px;
+    right: 10px;
+    color: #ffffff;
+    font-weight: normal;
+    opacity: 0.8;
+}
+
+/* Navbar */
+.navbar {
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.nav-items {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav-items li {
+    position: relative;
+}
+
+.nav-items a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+    padding: 8px 15px;
+    border-radius: 3px;
+    transition: background-color 0.3s, color 0.3s, transform 0.2s;
+}
+
+.nav-items a:hover {
+    background-color: #ffe8e8;
+    color: #ff3f6c;
+    transition: color 0.15s;
+}
+
+/* Dropdown Menu */
+/* Dropdown container styling */
+.nav-items .dropdown {
+    position: relative;
+}
+
+/* Hide dropdown menu initially */
+.nav-items .dropdown-menu {
+    display: none;
+    position: absolute;
+    top: 100%; /* Position it below the button */
+    left: 0;
+    background-color: white;
+    padding: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    list-style: none;
+}
+
+/* Style links in the dropdown */
+.nav-items .dropdown-menu li a {
+    display: block;
+    padding: 5px 10px;
+    color: black;
+    text-decoration: none;
+}
+
+/* Hover effect for dropdown links */
+.nav-items .dropdown-menu li a:hover {
+    background-color: #f0f0f0;
+}
+
+/* Show dropdown menu on hover */
+.nav-items .dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+
+/* Search Bar */
+.search-bar {
+    padding: 7px 15px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 25px;
+    outline: none;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: 250px;
+}
+
+.search-bar:focus {
+    border-color: #ff3f6c;
+    box-shadow: 0 0 5px rgba(255, 63, 108, 0.4);
+}
+
+/* Profile Icon */
+.user-profile {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform 0.3s;
+}
+
+.user-profile:hover {
+    transform: scale(1.2);
+}
+
+/* Styled Text */
+.styled-text {
+    font-family: Cursive;
+    font-weight: bold;
+    color: #ff3f6c;
+    font-size: 25px;
+    display: inline;
+
+    border-bottom: 2px solid #8b8184; 
+}
+
+.small-text {
+    font-family: 'Arial', sans-serif;
+    color: black;
+    font-size: 13px;
+    display: inline;
+    margin-left: 1px;
+    font-weight: bold;
+}
+
+
+  
+
+.explore {
+    width: 200px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+    display: inline-block;
+    margin-left: 25px;
+    margin-right: 10px;
+}
+
+.exp {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    margin-bottom: 12px;
+}
+
+
+.name {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 8px 0;
+}
+
+.short-desc {
+    .short-desc {
+        color: rgb(100, 100, 100);
+        margin-left: 8px; /* Align with the .name */
+        margin-bottom: 12px;
+        font-size: 14px; /* Optional adjustment */
+        text-align: left; /* Ensure left alignment */
+    }
+    
+}
+.short-desc {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+@media (max-width: 768px) {
+    .card-container {
+        flex-wrap: wrap;
+    }
+    .explore {
+        width: 100%;
+        height: auto; /* Allow auto height for smaller screens */
+    }
+}
+
+/* Button Style */
+.visit {
+    background-color: #ff3f6c; /* Default button color */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 4px;
+    font-size: 16px;
+    margin-left: 58px;
+    margin-bottom: 10px;
+    cursor: pointer; /* Changes cursor to pointer */
+    transition: background-color 0.15s;/* Smooth and fast transition */
+    
+}
+
+/* Hover Effect */
+.visit:hover {
+    background-color: #ac273d; /* Darker shade of the button color */
+    transform: background-color 0.15s; /* Slightly enlarges the button */
+}
+.round{
+    
+        width: 200px;      /* Keep the image width fixed */
+        height: 200px;     /* Keep the image height fixed */
+        object-fit: cover; /* Ensure the image fits perfectly without distortion */
+        margin-bottom: 12px;
+        border-radius: 50%; /* Make the image rounded */
+        border: none; /* Optional: Add a border for styling */
+        display: inline-block;
+        margin-left: 8px;
+        margin-right: 25px;
+    }
+    
+    .roundname{
+        margin-top: 0px;
+        padding-left: 8px;
+
+    }
+  
+  
+      .carousel-container {
+        width: 90%; /* Takes 90% of the screen width */
+        max-width: 1200px; /* Restricts to a fixed width for larger screens */
+        margin: 20px auto;
+        overflow: hidden;
+        border-radius: 10px; /* Rounded corners like Nykaa */
+        position: relative;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+      }
+  
+      .carousel {
+        display: flex;
+        transition: transform 0.4s ease-in-out;
+      }
+  
+      .carousel img {
+        width: 100%;
+        height: auto;
+        flex-shrink: 0;
+        height:500px;
+      }
+  
+      .carousel-navigation {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      .carousel-navigation button {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: white;
+        border: none;
+        padding: 8px 16px;
+        cursor: pointer;
+        font-size: 16px;
+        border-radius: 4px;
+      }
+  
+      .carousel-navigation button:hover {
+        background-color: rgba(0, 0, 0, 0.8);
+      }
+      .festival-container {
+        display: flex;             /* Arrange boxes horizontally */
+        gap: 30px;                 /* Space between boxes */
+        flex-wrap: wrap;           /* Wrap to next row on small screens */
+        justify-content: center;   /* Center the boxes */
+        padding: 20px;             /* Add container padding */
+      }
+      .festival-box {
+        background: #dd9fd8;               /* Light festive background */
+        border: 2px solid #ff2d2d;        /* Vibrant border color */
+        border-radius: 12px;              /* Rounded corners */
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1); /* Lighter shadow */
+        text-align: center;               /* Center content */
+        width: 160px;                     /* Reduced width */
+        height: 150px;                    /* Reduced height */
+        padding: 15px;                    /* Adjusted padding */
+        transition: transform 0.3s;       /* Smooth hover effect */
+        display: flex;                    /* Flexbox for layout */
+        flex-direction: column;           /* Vertical stacking */
+        justify-content: center;          /* Center all content vertically */
+      }
+      
+      .festival-image-wrapper {
+        width: 100px;                      /* Reduced circle width */
+        height: 200px;                     /* Reduced circle height */
+        margin: 0 auto 10px auto;         /* Center and space below image */
+        border-radius: 50%;               /* Circular image */
+        overflow: hidden;                 /* Crop images */
+        border: 2px solid #f37a24;        /* Add circular border */
+      }
+      
+      .festival-image {
+        width: 100px;
+        height: 100px;
+        object-fit: cover;                /* Keep images proportional */
+      }
+      
+      .festival-title {
+        font-size: 18px;                  /* Reduced title font size */
+        color: #da05c8;                   /* Title color */
+        font-weight: bold;                /* Bold text */
+        margin-bottom: 8px;  
+        font-family: 'Times New Roman', Times, serif;             /* Space below title */
+      }
+      
+      .festival-date {
+        font-size: 12px;                  /* Reduced date font size */
+        color: #555;                      /* Muted text color */
+        margin-bottom: 0;                 /* No space below */
+      }
+      

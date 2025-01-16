@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            margin: 0;
+        }
+
+        .dashboard-container {
+            width: 500px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .dashboard-container h2 {
+            text-align: center;
+            color: #333;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .file-input {
+            margin: 10px 0;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 10px;
+            background-color: #ff3f6c;
+            border: none;
+            border-radius: 4px;
+            color: #fff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #ac273d;
+        }
+    </style>
+</head>
+<body>
+    <div class="dashboard-container">
+        <h2>Add Your Service</h2>
+        <form action="add_service.php" method="POST" enctype="multipart/form-data">
+            <input class="input-field" type="text" name="service_name" placeholder="Service Name" required>
+            <textarea class="input-field" name="description" placeholder="Service Description" rows="4" required></textarea>
+            <input class="input-field" type="number" name="experience" placeholder="Years of Experience" required>
+            <input class="input-field" type="email" name="contact" placeholder="Contact Email or Phone" required>
+            <label for="image">Upload Service Image:</label>
+            <input class="file-input" type="file" name="image" accept="image/*" required>
+            <button class="submit-btn" type="submit">Add Service</button>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header and Navbar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header-container">
+        <div class="logo-title">
+            <h1>CityHub <span>#Madurai</span></h1>
+        
+        </div>
+
+        <nav class="navbar">
+            <ul class="nav-items">
+                <li><a href="index.html">Home</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-btn">Categories</a>
+                  <ul class="dropdown-menu">
+                      <li><a href="places.html">Places</a></li>
+                      <li><a href="services.html">Services</a></li>
+                  </ul>
+              </li>
+              
+                <li><input type="text" placeholder="Search..." class="search-bar"></li>
+                <li><a href="#">Reviews</a></li>
+                <li><a href="#"><img src="uicon.jpeg" alt="User Profile" class="user-profile"></a></li>
+            </ul>
+        </nav>
+    </header>
+    <p>
+        <span class="styled-text">Wanna explore but don't know where to start?</span>
+        <span class="small-text">Here comes for you</span>
+    </p>
+    <div class="explore">
+        <img class="exp" src="food.jpeg">
+        <p class="name">
+          FOOD
+        </p>
+        <p class="short-desc">
+          Madurai's Famous Foods
+        </p>
+        <button class="visit">
+          Visit
+        </button>
+      </div>
+      <div class="explore">
+        <img class="exp" src="temple.jpeg">
+        <p class="name">
+          TEMPLE
+        </p>
+        <p class="short-desc">
+          Madurai's Famous Temples
+        </p>
+        <button class="visit">
+          Visit
+        </button>
+      </div>
+      <div class="explore">
+        <img class="exp" src="church.jpeg">
+        <p class="name">
+         CHURCH
+        </p>
+        <p class="short-desc">
+          Madurai's Famous Church
+        </p>
+        <button class="visit">
+          Visit
+        </button>
+      </div>
+      <div class="explore">
+        <img class="exp" src="mosque.jpeg">
+        <p class="name">
+          MOSQUE
+        </p>
+        <p class="short-desc">
+          Madurai's Famous Mosque
+        </p>
+        <button class="visit">
+          Visit
+        </button>
+      </div>
+      <div class="explore">
+        <img class="exp" src="super markets.jpeg">
+        <p class="name">
+          SUPER MARKETS
+        </p>
+        <p class="short-desc">
+          Madurai's Famous supermarkets
+        </p>
+        <button class="visit">
+          Visit
+        </button>
+      </div>
+      <div class="explore">
+        <img class="exp" src="malls.jpeg">
+        <p class="name">
+          MALLS
+        </p>
+        <p class="short-desc">
+          Madurai's Famous Malls
+        </p>
+        <button class="visit">
+          Visit
+        </button>
+      </div>
+      <p>
+        <span class="styled-text">Tourist Spots</span>
+        <span class="small-text">Wows of Madurai</span>
+    </p>
+    <div class="round">
+        <img class="round" src="meenakshitemple.jpg">
+        <p class="roundname">
+          Meenakshi amman temple
+        </p>
+      </div>
+      <div class="round">
+        <img class="round" src="museum.jpeg">
+        <p class="roundname">
+          Gandhi Memorial Museum
+        </p>
+      </div>
+      <div class="round">
+        <img class="round" src="azhagarkovil.webp">
+        <p class="roundname">
+          Koodal Azhagar Temple
+        </p>
+      </div>
+      <div class="round">
+        <img class="round" src="thirumalainayakar.jpeg">
+        <p class="roundname">
+          Thirumalai Nayakar Mahal
+        </p>
+      </div>
+      <div class="round">
+        <img class="round" src="teppakulam.webp">
+        <p class="roundname">
+        Vandiyur Maariamman 
+        </p>
+      </div>
+      <div class="round">
+        <img class="round" src="kazimar.jpeg">
+        <p class="roundname">
+        Kazimar Big Mosque
+        </p>
+      </div>
+      <p>
+        <span class="styled-text">Upcoming Events in Madurai</span>
+    </p>
+    <div class="carousel-container">
+      <div class="carousel" id="carousel">
+        <img src="upcoming event1" alt="Slide 1">
+        <img src="upcoming event 2.jpg" alt="Slide 2">
+        <img src="upcoming event3.jpg" alt="Slide 3">
+        
+      </div>
+      <div class="carousel-navigation">
+        <button id="prev">←</button>
+        <button id="next">→</button>
+      </div>
+    </div>
+    
+    <script>
+      const carousel = document.getElementById('carousel');
+      const prevButton = document.getElementById('prev');
+      const nextButton = document.getElementById('next');
+      
+      let index = 0;
+      const totalSlides = carousel.children.length;
+    
+      function updateCarousel() {
+        const slideWidth = document.querySelector('.carousel-container').clientWidth;
+        carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+      }
+    
+      nextButton.addEventListener('click', () => {
+        index = (index + 1) % totalSlides;
+        updateCarousel();
+      });
+    
+      prevButton.addEventListener('click', () => {
+        index = (index - 1 + totalSlides) % totalSlides;
+        updateCarousel();
+      });
+    
+      window.addEventListener('resize', updateCarousel);
+    
+      // Initialize position on load
+      updateCarousel();
+    </script>
+     <p>
+      <span class="styled-text">Top Rated Service Providers</span>
+  </p>
+    
+      <div class="explore">
+        <img src="temple-image.jpg" alt="PROFILE" width="100%" height="auto" />        <h3>Name:</h3>
+        <p>Service:</p>
+        <p>Ratings:</p>
+        <button class="visit">Visit</button>
+      </div>
+      <div class="explore">
+        <img src="temple-image.jpg" alt="PROFILE" width="100%" height="auto" />        <h3>Name:</h3>
+        <p>Service:</p>
+        <p>Ratings:</p>
+        <button class="visit">Visit</button>
+      </div>
+      <div class="explore">
+        <img src="temple-image.jpg" alt="PROFILE" width="100%" height="auto" />        <h3>Name:</h3>
+        <p>Service:</p>
+        <p>Ratings:</p>
+        <button class="visit">Visit</button>
+      </div>
+      <div class="explore">
+        <img src="temple-image.jpg" alt="PROFILE" width="100%" height="auto" />        <h3>Name:</h3>
+        <p>Service:</p>
+        <p>Ratings:</p>
+        <button class="visit">Visit</button>
+      </div>
+      <div class="explore">
+        <img src="temple-image.jpg" alt="PROFILE" width="100%" height="auto" />        <h3>Name:</h3>
+        <p>Service:</p>
+        <p>Ratings:</p>
+        <button class="visit">Visit</button>
+      </div>
+      <div class="explore">
+        <img src="temple-image.jpg" alt="PROFILE" width="100%" height="auto" />        <h3>Name:</h3>
+        <p>Service:</p>
+        <p>Ratings:</p>
+        <button class="visit">Visit</button>
+      </div>
+      <p>
+        <span class="styled-text">Celebrations of Madurai</span>
+    </p>
+    <div class="festival-container">
+      <div class="festival-box">
+        <div class="festival-image-wrapper">
+          <img src="jallikattu.png" alt="Jallikattu" class="festival-image" />
+        </div>
+        <h3 class="festival-title">Jallikattu</h3>
+        <p class="festival-date">January 14, 2025</p>
+      </div>
+    
+      <div class="festival-box">
+        <div class="festival-image-wrapper">
+          <img src="chithirai thiruvizha.webp" alt="Chithirai Festival" class="festival-image" />
+        </div>
+        <h3 class="festival-title">Chithirai Festival</h3>
+        <p class="festival-date">April 25 - May 5, 2025</p>
+      </div>
+    
+      <div class="festival-box">
+        <div class="festival-image-wrapper">
+          <img src="pongal.webp" alt="Pongal Festival" class="festival-image" />
+        </div>
+        <h3 class="festival-title">Pongal Festival</h3>
+        <p class="festival-date">January 15-18, 2025</p>
+      </div>
+    </div>
+ 
+    
+</body>
+</html>
+</body>
+</html>
